@@ -235,7 +235,19 @@
     </div>
 
     <script>
-        
+        //01. 클릭한 카드 뒤집기 효과 주기
+
+        const cards = document.querySelectorAll(".card");
+
+        function flipCard(e){
+            //console.log(e.target);
+            let clickedCard = e.target;
+            clickedCard.classList.add("flip");
+        }
+
+        cards.forEach(card => {
+            card.addEventListener("click", flipCard);
+        })
     </script>
 </body>
 </html>
